@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>لوماهوم | داشبورد</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="header">
+        <div>
+          <p class="eyebrow">سامانه روشنایی <span class="technical-term" dir="ltr">Local-First</span></p>
+          <h1>لوماهوم</h1>
+        </div>
+        <span id="device-status" class="badge badge-offline">دستگاه آفلاین است</span>
+      </section>
+
+      <section class="notice" role="status">
+        <strong id="device-message-title">در حال بارگذاری وضعیت...</strong>
+        <span id="device-message-detail">در انتظار پاسخ <span class="technical-term" dir="ltr">Server</span>.</span>
+      </section>
+
+      <p id="request-error" class="request-error" role="alert" hidden></p>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>حالت</h2>
+          <span id="mode-summary" class="panel-note">در حال بارگذاری...</span>
+        </div>
+        <div class="segmented" aria-label="کنترل حالت">
+          <button id="mode-manual" type="button" disabled>دستی</button>
+          <button id="mode-night" type="button" disabled>شب</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>وضعیت چراغ دستی</h2>
+          <span id="light-summary" class="panel-note">در حال بارگذاری...</span>
+        </div>
+        <div class="segmented" aria-label="کنترل چراغ دستی">
+          <button id="light-on" type="button" disabled>روشن</button>
+          <button id="light-off" type="button" disabled>خاموش</button>
+        </div>
+      </section>
+
+      <section class="status-grid" aria-label="وضعیت دستگاه">
+        <div class="status-field">
+          <span>حالت انتخاب‌شده</span>
+          <strong id="desired-mode">در دسترس نیست</strong>
+        </div>
+        <div class="status-field">
+          <span>وضعیت انتخاب‌شده چراغ</span>
+          <strong id="desired-light">در دسترس نیست</strong>
+        </div>
+        <div class="status-field">
+          <span>حالت فعلی</span>
+          <strong id="reported-mode">—</strong>
+        </div>
+        <div class="status-field">
+          <span>وضعیت فعلی چراغ</span>
+          <strong id="reported-light">—</strong>
+        </div>
+        <div class="status-field">
+          <span>مقدار خام حسگر</span>
+          <strong id="sensor-value" class="technical-value">—</strong>
+        </div>
+        <div class="status-field">
+          <span>نسخه تنظیمات اعمال‌شده</span>
+          <strong id="reported-version" class="technical-value">—</strong>
+        </div>
+        <div class="status-field">
+          <span>نسخه تنظیمات انتخابی</span>
+          <strong id="desired-version" class="technical-value">—</strong>
+        </div>
+        <div class="status-field">
+          <span>آخرین Heartbeat</span>
+          <strong id="last-seen" class="technical-value">—</strong>
+        </div>
+      </section>
+
+      <section class="panel recent-events-panel">
+        <div class="panel-header">
+          <h2>آخرین فعالیت‌های دستگاه</h2>
+          <span class="panel-note">۵ فعالیت آخر</span>
+        </div>
+        <p id="events-empty" class="events-empty">هیچ فعالیتی از دستگاه دریافت نشده است.</p>
+        <ul id="recent-events" class="recent-events" aria-live="polite"></ul>
+      </section>
+
+      <footer class="backend-health">
+        <span>وضعیت <span class="technical-term" dir="ltr">Server</span></span>
+        <strong id="backend-health" class="health health-checking">در حال بررسی...</strong>
+      </footer>
+    </main>
+  </body>
+</html>
