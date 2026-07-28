@@ -20,5 +20,3 @@ constexpr uint32_t LIGHT_SAMPLE_INTERVAL_MS = 100;
 constexpr uint32_t ERROR_LED_DURATION_MS = 300;
 
 constexpr size_t SERIAL_COMMAND_CAPACITY = 64;
-constexpr size_t EVENT_BUFFER_CAPACITY = 64;
-constexpr size_t MAX_EVENTS_PER_HEARTBEAT = 32;

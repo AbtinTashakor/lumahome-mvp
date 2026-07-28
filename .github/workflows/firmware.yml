@@ -25,3 +25,5 @@ jobs:
         working-directory: firmware
       - run: pio run
         working-directory: firmware
+      - run: pio test -e native
+        working-directory: firmware

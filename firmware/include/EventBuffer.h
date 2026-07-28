@@ -1,8 +1,10 @@
 #pragma once
 
-#include <Arduino.h>
+#include <stddef.h>
+#include <stdint.h>
 
-#include "HardwareConfig.h"
+constexpr size_t EVENT_BUFFER_CAPACITY = 64;
+constexpr size_t MAX_EVENTS_PER_HEARTBEAT = 32;
 
 enum class DeviceEventType : uint8_t {
     ModeChanged,
