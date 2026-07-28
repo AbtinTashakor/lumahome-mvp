@@ -23,7 +23,7 @@ commercial home automation platform.
 - Fixed-size RAM event queue with retry, acknowledgement, and deduplication
 - SQLite persistence for desired state and device events
 - Framework-free RTL dashboard with Persian labels and a bundled Vazirmatn font
-- Exactly two short startup beeps and no other buzzer output
+
 
 ## Architecture
 
