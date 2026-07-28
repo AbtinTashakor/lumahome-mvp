@@ -1,0 +1,32 @@
+# Rust
+target/
+**/target/
+
+# PlatformIO and embedded build artifacts
+.pio/
+**/.pio/
+firmware/include/Secrets.h
+
+# Runtime configuration
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Runtime data and logs
+*.log
+backend/data/*
+!backend/data/.gitkeep
+
+# Editors and operating systems
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# JavaScript dependencies and temporary files
+node_modules/
+*.tmp
+*.temp
